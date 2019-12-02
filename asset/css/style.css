@@ -1,0 +1,14 @@
+/* load font */
+@font-face{
+	font-family:droid-sans;
+	src:url(../font/DroidSans.ttf);
+}
+body{
+	font-family:droid-sans;
+}
+img{
+	border-radius:40%;
+}
+.icon a{
+	margin: 0 5px;
+}
