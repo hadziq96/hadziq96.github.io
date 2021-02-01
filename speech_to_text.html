@@ -6,9 +6,9 @@
 </head>
 <body>
 
-	<!-- <h3 align="center">Speech to text converter JavaScript</h3>
+	<h3 align="center">Speech to text converter JavaScript</h3>
 	<div id="result"></div>
-	<button class="button-mic"><i class="fa fa-microphone btn btn-danger" aria-hidden="true"></i></button> -->
+	<button class="button-mic"><i class="fa fa-microphone btn btn-danger" aria-hidden="true"></i></button>
 	<hr>
 	<br>
 	<button class="button-mic" data-id="result1" width="100"><i class="fa fa-microphone btn btn-danger" aria-hidden="true"></i></button>
@@ -51,12 +51,14 @@
 						}
 						// var result=finalTranscripts + '<span style="color: #999">' + interimTranscripts + '</span>';
 						// alert(result);
+						$('#'+$(this).data('id')).val(finalTranscripts);
 						
 					};
 					speechRecognizer.onerror = function (event) {
 
 					};
-					$('#'+$(this).data('id')).val(finalTranscripts);
+					
+					//$('#result').html(finalTranscripts);
 				}else {
 					alert('Your browser is not supported. Please download Google chrome or Update your Google chrome!!');
 				}
