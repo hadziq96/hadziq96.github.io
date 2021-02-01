@@ -63,8 +63,8 @@
 							}
 						}
 						// var result=finalTranscripts + '<span style="color: #999">' + interimTranscripts + '</span>';
-						$('#result').html(finalTranscripts);
-						$('#result2').val(finalTranscripts);
+						$('#result').html(finalTranscripts + interimTranscripts );
+						$('#result2').val(finalTranscripts + interimTranscripts );
 					};
 					speechRecognizer.onerror = function (event) {
 
