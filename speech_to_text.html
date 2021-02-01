@@ -3,32 +3,22 @@
 <head>
 	<title>Speech to text Converter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style type="text/css">
-		body{
-			font-family: Open Sans;
-		}
-		#result{
-			height: 200px;
-			border: 1px solid #ccc;
-			padding: 10px;
-			box-shadow: 0 0 10px 0 #bbb;
-			margin-bottom: 30px;
-			font-size: 14px;
-			line-height: 25px;
-		}
-		button{
-			font-size: 20px;
-			position: absolute;
-			top: 240px;
-			left: 50%;
-		}
-	</style>
 </head>
 <body>
 
-	<h3 align="center">Speech to text converter JavaScript</h3>
+	<!-- <h3 align="center">Speech to text converter JavaScript</h3>
 	<div id="result"></div>
-	<button class="button-mic"><i class="fa fa-microphone btn btn-danger" aria-hidden="true"></i></button>
+	<button class="button-mic"><i class="fa fa-microphone btn btn-danger" aria-hidden="true"></i></button> -->
+	<hr>
+	<br>
+	<button class="button-mic" data-id="result1" width="100"><i class="fa fa-microphone btn btn-danger" aria-hidden="true"></i></button>
+	<textarea id="result1"></textarea>
+
+	<button class="button-mic" data-id="result2" width="100"><i class="fa fa-microphone btn btn-danger" aria-hidden="true"></i></button>
+	<textarea id="result2"></textarea>
+
+	<button class="button-mic" data-id="result3" width="100"><i class="fa fa-microphone btn btn-danger" aria-hidden="true"></i></button>
+	<textarea id="result3"></textarea>
 
 	
 
@@ -60,13 +50,15 @@
 							}
 						}
 						// var result=finalTranscripts + '<span style="color: #999">' + interimTranscripts + '</span>';
-						$('#result').html(finalTranscripts);
+						// alert(result);
+						
 					};
 					speechRecognizer.onerror = function (event) {
 
 					};
+					$('#'+$(this).data('id')).val(finalTranscripts);
 				}else {
-					$('#result').html('Your browser is not supported. Please download Google chrome or Update your Google chrome!!');
+					alert('Your browser is not supported. Please download Google chrome or Update your Google chrome!!');
 				}
 			})
   
