@@ -51,7 +51,7 @@
 						}
 						// var result=finalTranscripts + '<span style="color: #999">' + interimTranscripts + '</span>';
 						// alert(result);
-						$('#'+$(this).data('id')).val(finalTranscripts);
+						$('#result').html(finalTranscripts);
 						
 					};
 					speechRecognizer.onerror = function (event) {
