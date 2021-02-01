@@ -29,6 +29,7 @@
 	<h3 align="center">Speech to text converter JavaScript</h3>
 	<div id="result"></div>
 	<button class="button-mic"><i class="fa fa-microphone btn btn-danger" aria-hidden="true"></i></button>
+	<textarea id="result2"></textarea>
 
 	
 
@@ -43,7 +44,7 @@
 					var speechRecognizer = new webkitSpeechRecognition();
 					speechRecognizer.continuous = true;
 					speechRecognizer.interimResults = true;
-					speechRecognizer.lang = 'en-US';
+					speechRecognizer.lang = 'id';
 					speechRecognizer.start();
 
 					var finalTranscripts = '';
@@ -60,7 +61,8 @@
 							}
 						}
 						// var result=finalTranscripts + '<span style="color: #999">' + interimTranscripts + '</span>';
-						$('#result').html(finalTranscripts)
+						$('#result').html(finalTranscripts);
+						$('#result2').val(finalTranscripts);
 					};
 					speechRecognizer.onerror = function (event) {
 
